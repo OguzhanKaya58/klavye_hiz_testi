@@ -27,322 +27,252 @@ class _MiddleLevelState extends State<MiddleLevel> {
       body: SingleChildScrollView(
         child: Column(
           children: [
-            Padding(
-              padding: const EdgeInsets.all(8.0),
-              child: GestureDetector(
-                onTap: () {
-                  Navigator.of(context).push(
-                      MaterialPageRoute(builder: (context) => KralinHikayesi()));
-                },
-                onLongPress: () {
-                  Navigator.of(context).push(
-                      MaterialPageRoute(builder: (context) => KralinHikayesi()));
-                },
-                child: Card(
-                  color: Colors.blueGrey,
-                  child: Padding(
-                    padding: const EdgeInsets.all(8.0),
-                    child: Row(
-                      mainAxisAlignment: MainAxisAlignment.center,
-                      children: [
-                        Text(
-                          "Kral'ın Hikayesi",
-                          style: TextStyle(
-                            fontSize: 24,
-                            fontWeight: FontWeight.bold,
-                            color: Colors.white,
-                          ),
-                        ),
-                      ],
+            Container(
+              width: MediaQuery.of(context).size.width,
+              child: Padding(
+                padding: const EdgeInsets.all(8.0),
+                child: GestureDetector(
+                  onTap: () {
+                    Navigator.of(context).push(MaterialPageRoute(
+                        builder: (context) => KralinHikayesi()));
+                  },
+                  onLongPress: () {
+                    Navigator.of(context).push(MaterialPageRoute(
+                        builder: (context) => KralinHikayesi()));
+                  },
+                  child: Card(
+                    color: Colors.white,
+                    shape: Border(
+                      right: BorderSide(color: Colors.blue, width: 10),
                     ),
+                    child: Stack(children: [
+                      Center(child: Image.asset("assets/mutsuzKral.jpg")),
+                    ]),
                   ),
                 ),
               ),
             ),
-            Padding(
-              padding: const EdgeInsets.all(8.0),
-              child: GestureDetector(
-                onTap: () {
-                  Navigator.of(context).push(
-                      MaterialPageRoute(builder: (context) => TevazuUzenineHikaye()));
-                },
-                onLongPress: () {
-                  Navigator.of(context).push(
-                      MaterialPageRoute(builder: (context) => TevazuUzenineHikaye()));
-                },
-                child: Card(
-                  color: Colors.blueGrey,
-                  child: Padding(
-                    padding: const EdgeInsets.all(8.0),
-                    child: Row(
-                      mainAxisAlignment: MainAxisAlignment.center,
-                      children: [
-                        Text(
-                          "Tevazu Üzerine Hikaye",
-                          style: TextStyle(
-                            fontSize: 24,
-                            fontWeight: FontWeight.bold,
-                            color: Colors.white,
-                          ),
-                        ),
-                      ],
+            Container(
+              width: MediaQuery.of(context).size.width,
+              child: Padding(
+                padding: const EdgeInsets.all(8.0),
+                child: GestureDetector(
+                  onTap: () {
+                    Navigator.of(context).push(MaterialPageRoute(
+                        builder: (context) => TevazuUzenineHikaye()));
+                  },
+                  onLongPress: () {
+                    Navigator.of(context).push(MaterialPageRoute(
+                        builder: (context) => TevazuUzenineHikaye()));
+                  },
+                  child: Card(
+                    color: Colors.white,
+                    shape: Border(
+                      right: BorderSide(color: Colors.blue, width: 10),
                     ),
+                    child: Stack(children: [
+                      Center(child: Image.asset("assets/Mevlana.jpg")),
+                    ]),
                   ),
                 ),
               ),
             ),
-            Padding(
-              padding: const EdgeInsets.all(8.0),
-              child: GestureDetector(
-                onTap: () {
-                  Navigator.of(context).push(
-                      MaterialPageRoute(builder: (context) => IcinizdeHicDucenVarMi()));
-                },
-                onLongPress: () {
-                  Navigator.of(context).push(
-                      MaterialPageRoute(builder: (context) => IcinizdeHicDucenVarMi()));
-                },
-                child: Card(
-                  color: Colors.blueGrey,
-                  child: Padding(
-                    padding: const EdgeInsets.all(8.0),
-                    child: Row(
-                      mainAxisAlignment: MainAxisAlignment.center,
-                      children: [
-                        Text(
-                          "İçinizde Hiç Düşen var mı?",
-                          style: TextStyle(
-                            fontSize: 24,
-                            fontWeight: FontWeight.bold,
-                            color: Colors.white,
-                          ),
-                        ),
-                      ],
+            Container(
+              width: MediaQuery.of(context).size.width,
+              child: Padding(
+                padding: const EdgeInsets.all(8.0),
+                child: GestureDetector(
+                  onTap: () {
+                    Navigator.of(context).push(MaterialPageRoute(
+                        builder: (context) => IcinizdeHicDucenVarMi()));
+                  },
+                  onLongPress: () {
+                    Navigator.of(context).push(MaterialPageRoute(
+                        builder: (context) => IcinizdeHicDucenVarMi()));
+                  },
+                  child: Card(
+                    color: Colors.white,
+                    shape: Border(
+                      right: BorderSide(color: Colors.blue, width: 10),
                     ),
+                    child: Stack(children: [
+                      Center(child: Image.asset("assets/IcinizdeHicDüsenVarMi.jpg")),
+                    ]),
                   ),
                 ),
               ),
             ),
-            Padding(
-              padding: const EdgeInsets.all(8.0),
-              child: GestureDetector(
-                onTap: () {
-                  Navigator.of(context).push(
-                      MaterialPageRoute(builder: (context) => SadakaHikayesi()));
-                },
-                onLongPress: () {
-                  Navigator.of(context).push(
-                      MaterialPageRoute(builder: (context) => SadakaHikayesi()));
-                },
-                child: Card(
-                  color: Colors.blueGrey,
-                  child: Padding(
-                    padding: const EdgeInsets.all(8.0),
-                    child: Row(
-                      mainAxisAlignment: MainAxisAlignment.center,
-                      children: [
-                        Text(
-                          "Sadaka Hikayesi",
-                          style: TextStyle(
-                            fontSize: 24,
-                            fontWeight: FontWeight.bold,
-                            color: Colors.white,
-                          ),
-                        ),
-                      ],
+            Container(
+              width: MediaQuery.of(context).size.width,
+              child: Padding(
+                padding: const EdgeInsets.all(8.0),
+                child: GestureDetector(
+                  onTap: () {
+                    Navigator.of(context).push(MaterialPageRoute(
+                        builder: (context) => SadakaHikayesi()));
+                  },
+                  onLongPress: () {
+                    Navigator.of(context).push(MaterialPageRoute(
+                        builder: (context) => SadakaHikayesi()));
+                  },
+                  child: Card(
+                    color: Colors.white,
+                    shape: Border(
+                      right: BorderSide(color: Colors.blue, width: 10),
                     ),
+                    child: Stack(children: [
+                      Center(child: Image.asset("assets/Sadaka.jpg")),
+                    ]),
                   ),
                 ),
               ),
             ),
-            Padding(
-              padding: const EdgeInsets.all(8.0),
-              child: GestureDetector(
-                onTap: () {
-                  Navigator.of(context).push(
-                      MaterialPageRoute(builder: (context) => TekGozluGeyik()));
-                },
-                onLongPress: () {
-                  Navigator.of(context).push(
-                      MaterialPageRoute(builder: (context) => TekGozluGeyik()));
-                },
-                child: Card(
-                  color: Colors.blueGrey,
-                  child: Padding(
-                    padding: const EdgeInsets.all(8.0),
-                    child: Row(
-                      mainAxisAlignment: MainAxisAlignment.center,
-                      children: [
-                        Text(
-                          "Tek Gözlü Geyik",
-                          style: TextStyle(
-                            fontSize: 24,
-                            fontWeight: FontWeight.bold,
-                            color: Colors.white,
-                          ),
-                        ),
-                      ],
+            Container(
+              width: MediaQuery.of(context).size.width,
+              child: Padding(
+                padding: const EdgeInsets.all(8.0),
+                child: GestureDetector(
+                  onTap: () {
+                    Navigator.of(context).push(MaterialPageRoute(
+                        builder: (context) => TekGozluGeyik()));
+                  },
+                  onLongPress: () {
+                    Navigator.of(context).push(MaterialPageRoute(
+                        builder: (context) => TekGozluGeyik()));
+                  },
+                  child: Card(
+                    color: Colors.white,
+                    shape: Border(
+                      right: BorderSide(color: Colors.blue, width: 10),
                     ),
+                    child: Stack(children: [
+                      Center(child: Image.asset("assets/TekGozluGeyik.jpg")),
+                    ]),
                   ),
                 ),
               ),
             ),
-            Padding(
-              padding: const EdgeInsets.all(8.0),
-              child: GestureDetector(
-                onTap: () {
-                  Navigator.of(context).push(
-                      MaterialPageRoute(builder: (context) => KargaIleKarga()));
-                },
-                onLongPress: () {
-                  Navigator.of(context).push(
-                      MaterialPageRoute(builder: (context) => KargaIleKarga()));
-                },
-                child: Card(
-                  color: Colors.blueGrey,
-                  child: Padding(
-                    padding: const EdgeInsets.all(8.0),
-                    child: Row(
-                      mainAxisAlignment: MainAxisAlignment.center,
-                      children: [
-                        Text(
-                          "Kartal İle Karga",
-                          style: TextStyle(
-                            fontSize: 24,
-                            fontWeight: FontWeight.bold,
-                            color: Colors.white,
-                          ),
-                        ),
-                      ],
+            Container(
+              width: MediaQuery.of(context).size.width,
+              child: Padding(
+                padding: const EdgeInsets.all(8.0),
+                child: GestureDetector(
+                  onTap: () {
+                    Navigator.of(context).push(MaterialPageRoute(
+                        builder: (context) => KargaIleKarga()));
+                  },
+                  onLongPress: () {
+                    Navigator.of(context).push(MaterialPageRoute(
+                        builder: (context) => KargaIleKarga()));
+                  },
+                  child: Card(
+                    color: Colors.white,
+                    shape: Border(
+                      right: BorderSide(color: Colors.blue, width: 10),
                     ),
+                    child: Stack(children: [
+                      Center(child: Image.asset("assets/KartalIleKarga.jpg")),
+                    ]),
                   ),
                 ),
               ),
             ),
-            Padding(
-              padding: const EdgeInsets.all(8.0),
-              child: GestureDetector(
-                onTap: () {
-                  Navigator.of(context).push(
-                      MaterialPageRoute(builder: (context) => TestiyiKirmadanOnce()));
-                },
-                onLongPress: () {
-                  Navigator.of(context).push(
-                      MaterialPageRoute(builder: (context) => TestiyiKirmadanOnce()));
-                },
-                child: Card(
-                  color: Colors.blueGrey,
-                  child: Padding(
-                    padding: const EdgeInsets.all(8.0),
-                    child: Row(
-                      mainAxisAlignment: MainAxisAlignment.center,
-                      children: [
-                        Text(
-                          "Testiyi Kırmadan Önce",
-                          style: TextStyle(
-                            fontSize: 24,
-                            fontWeight: FontWeight.bold,
-                            color: Colors.white,
-                          ),
-                        ),
-                      ],
+            Container(
+              width: MediaQuery.of(context).size.width,
+              child: Padding(
+                padding: const EdgeInsets.all(8.0),
+                child: GestureDetector(
+                  onTap: () {
+                    Navigator.of(context).push(MaterialPageRoute(
+                        builder: (context) => TestiyiKirmadanOnce()));
+                  },
+                  onLongPress: () {
+                    Navigator.of(context).push(MaterialPageRoute(
+                        builder: (context) => TestiyiKirmadanOnce()));
+                  },
+                  child: Card(
+                    color: Colors.white,
+                    shape: Border(
+                      right: BorderSide(color: Colors.blue, width: 10),
                     ),
+                    child: Stack(children: [
+                      Center(child: Image.asset("assets/TestiKirilmadanOnce.jpg")),
+                    ]),
                   ),
                 ),
               ),
             ),
-            Padding(
-              padding: const EdgeInsets.all(8.0),
-              child: GestureDetector(
-                onTap: () {
-                  Navigator.of(context).push(
-                      MaterialPageRoute(builder: (context) => TilkiIleLeylek()));
-                },
-                onLongPress: () {
-                  Navigator.of(context).push(
-                      MaterialPageRoute(builder: (context) => TilkiIleLeylek()));
-                },
-                child: Card(
-                  color: Colors.blueGrey,
-                  child: Padding(
-                    padding: const EdgeInsets.all(8.0),
-                    child: Row(
-                      mainAxisAlignment: MainAxisAlignment.center,
-                      children: [
-                        Text(
-                          "Tilki ile Leylek",
-                          style: TextStyle(
-                            fontSize: 24,
-                            fontWeight: FontWeight.bold,
-                            color: Colors.white,
-                          ),
-                        ),
-                      ],
+            Container(
+              width: MediaQuery.of(context).size.width,
+              child: Padding(
+                padding: const EdgeInsets.all(8.0),
+                child: GestureDetector(
+                  onTap: () {
+                    Navigator.of(context).push(MaterialPageRoute(
+                        builder: (context) => TilkiIleLeylek()));
+                  },
+                  onLongPress: () {
+                    Navigator.of(context).push(MaterialPageRoute(
+                        builder: (context) => TilkiIleLeylek()));
+                  },
+                  child: Card(
+                    color: Colors.white,
+                    shape: Border(
+                      right: BorderSide(color: Colors.blue, width: 10),
                     ),
+                    child: Stack(children: [
+                      Center(child: Image.asset("assets/TilkiIleLeylek.jpg")),
+                    ]),
                   ),
                 ),
               ),
             ),
-            Padding(
-              padding: const EdgeInsets.all(8.0),
-              child: GestureDetector(
-                onTap: () {
-                  Navigator.of(context).push(
-                      MaterialPageRoute(builder: (context) => ZatenInecektim()));
-                },
-                onLongPress: () {
-                  Navigator.of(context).push(
-                      MaterialPageRoute(builder: (context) => ZatenInecektim()));
-                },
-                child: Card(
-                  color: Colors.blueGrey,
-                  child: Padding(
-                    padding: const EdgeInsets.all(8.0),
-                    child: Row(
-                      mainAxisAlignment: MainAxisAlignment.center,
-                      children: [
-                        Text(
-                          "Zaten İnecektim",
-                          style: TextStyle(
-                            fontSize: 24,
-                            fontWeight: FontWeight.bold,
-                            color: Colors.white,
-                          ),
-                        ),
-                      ],
+            Container(
+              width: MediaQuery.of(context).size.width,
+              child: Padding(
+                padding: const EdgeInsets.all(8.0),
+                child: GestureDetector(
+                  onTap: () {
+                    Navigator.of(context).push(MaterialPageRoute(
+                        builder: (context) => ZatenInecektim()));
+                  },
+                  onLongPress: () {
+                    Navigator.of(context).push(MaterialPageRoute(
+                        builder: (context) => ZatenInecektim()));
+                  },
+                  child: Card(
+                    color: Colors.white,
+                    shape: Border(
+                      right: BorderSide(color: Colors.blue, width: 10),
                     ),
+                    child: Stack(children: [
+                      Center(child: Image.asset("assets/dusmesemdezateninecektim.jpg")),
+                    ]),
                   ),
                 ),
               ),
             ),
-            Padding(
-              padding: const EdgeInsets.all(8.0),
-              child: GestureDetector(
-                onTap: () {
-                  Navigator.of(context).push(
-                      MaterialPageRoute(builder: (context) => AyiIleTilki()));
-                },
-                onLongPress: () {
-                  Navigator.of(context).push(
-                      MaterialPageRoute(builder: (context) => AyiIleTilki()));
-                },
-                child: Card(
-                  color: Colors.blueGrey,
-                  child: Padding(
-                    padding: const EdgeInsets.all(8.0),
-                    child: Row(
-                      mainAxisAlignment: MainAxisAlignment.center,
-                      children: [
-                        Text(
-                          "Ayı ile Tilki",
-                          style: TextStyle(
-                            fontSize: 24,
-                            fontWeight: FontWeight.bold,
-                            color: Colors.white,
-                          ),
-                        ),
-                      ],
+            Container(
+              width: MediaQuery.of(context).size.width,
+              child: Padding(
+                padding: const EdgeInsets.all(8.0),
+                child: GestureDetector(
+                  onTap: () {
+                    Navigator.of(context).push(MaterialPageRoute(
+                        builder: (context) => AyiIleTilki()));
+                  },
+                  onLongPress: () {
+                    Navigator.of(context).push(MaterialPageRoute(
+                        builder: (context) => AyiIleTilki()));
+                  },
+                  child: Card(
+                    color: Colors.white,
+                    shape: Border(
+                      right: BorderSide(color: Colors.blue, width: 10),
                     ),
+                    child: Stack(children: [
+                      Center(child: Image.asset("assets/ayiIletilki.jpg")),
+                    ]),
                   ),
                 ),
               ),
