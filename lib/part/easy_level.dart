@@ -22,7 +22,7 @@ class _EaseLevelState extends State<EaseLevel> {
   Widget build(BuildContext context) {
     return Scaffold(
       appBar: AppBar(
-        backgroundColor: Colors.green,
+        backgroundColor: Colors.teal,
         title: Text("Kolay Hikayeler"),
       ),
       backgroundColor: Colors.grey.shade300,

@@ -49,51 +49,49 @@ class _AkrepHikayesiState extends State<AkrepHikayesi> {
     var shownWidget;
     if (step == 0)
       shownWidget = <Widget>[
-        Text(
-          "Başlamaya Hazır mısın ?",
-          style: TextStyle(fontSize: 24, color: Colors.blueGrey),
+        SizedBox(
+          height: MediaQuery.of(context).size.height / 3.3,
         ),
-        Container(
-          padding: EdgeInsets.only(top: 10),
-          child: RaisedButton(
-            color: Colors.blueGrey,
-            onPressed: () {
+        GestureDetector(
+          onTap: () {
+            setState(() {
+              step++;
+              updateLastTypeAt();
+            });
+            Timer.periodic(new Duration(seconds: 1), (timer) {
+              int now = DateTime.now().millisecondsSinceEpoch;
               setState(() {
-                step++;
-                updateLastTypeAt();
+                if (step == 1 && now - lastTypeAt > 4000) {
+                  step++;
+                }
+                if (step != 1) {
+                  timer.cancel();
+                }
               });
-              Timer.periodic(new Duration(seconds: 1), (timer) {
-                int now = DateTime.now().millisecondsSinceEpoch;
-                setState(() {
-                  if (step == 1 && now - lastTypeAt > 4000) {
-                    step++;
-                  }
-                  if (step != 1) {
-                    timer.cancel();
-                  }
-                });
-              });
-            },
-            child: Text(
-              "Başla",
-              style: TextStyle(
-                color: Colors.white,
-              ),
+            });
+          },
+          child: Center(
+            child: Container(
+              child: Image.asset("assets/start.png"),
+              width: MediaQuery.of(context).size.width / 1.5,
             ),
           ),
         ),
       ];
     else if (step == 1)
       shownWidget = <Widget>[
+        SizedBox(
+          height: MediaQuery.of(context).size.height / 6,
+        ),
         typedCharLength != null
             ? Text(
-                "$typedCharLength",
-                style: TextStyle(color: Colors.green, fontSize: 36),
-              )
+          "$typedCharLength",
+          style: TextStyle(color: Colors.white, fontSize: 64),
+        )
             : Text(
-                "0",
-                style: TextStyle(color: Colors.green, fontSize: 36),
-              ),
+          "0",
+          style: TextStyle(color: Colors.white, fontSize: 64),
+        ),
         SizedBox(
           height: 20,
         ),
@@ -103,7 +101,7 @@ class _AkrepHikayesiState extends State<AkrepHikayesi> {
           child: Marquee(
             text: lorem,
             style: TextStyle(
-                fontWeight: FontWeight.bold, fontSize: 24, color: Colors.blueGrey),
+                fontWeight: FontWeight.bold, fontSize: 24, color: Colors.black45),
             scrollAxis: Axis.horizontal,
             crossAxisAlignment: CrossAxisAlignment.start,
             blankSpace: 20.0,
@@ -122,13 +120,20 @@ class _AkrepHikayesiState extends State<AkrepHikayesi> {
         ),
         Padding(
           padding: const EdgeInsets.all(8.0),
-          child: TextField(
-            autofocus: true,
-            keyboardType: TextInputType.multiline,
-            onChanged: onType,
-            decoration: InputDecoration(
-              border: OutlineInputBorder(),
-              hintText: "Yaz Bakalım",
+          child: Theme(
+            data: new ThemeData(
+              hintColor: Colors.black45,
+            ),
+            child: TextField(
+              style: TextStyle(color: Colors.black45),
+              autofocus: true,
+              keyboardType: TextInputType.multiline,
+              onChanged: onType,
+              cursorColor: Colors.black45,
+              decoration: InputDecoration(
+                border: OutlineInputBorder(),
+                hintText: "Yaz Bakalım",
+              ),
             ),
           ),
         ),
@@ -141,58 +146,55 @@ class _AkrepHikayesiState extends State<AkrepHikayesi> {
         ),
         Center(
             child: Text(
-          "Tebrikler Kazandın !",
-          style: TextStyle(fontSize: 36, color: Colors.green),
-        )),
+              "Tebrikler Kazandın !",
+              style: TextStyle(fontSize: 36, color: Colors.green),
+            )),
       ];
     } else
       shownWidget = <Widget>[
-        Text(
-          "Maalesef kaybettin !",
-          style: TextStyle(color: Colors.red, fontSize: 24),
-        ),
         SizedBox(
-          height: 10,
+          height: MediaQuery.of(context).size.height / 7,
         ),
+        Center(child: Text("Oyun Bitti!",style: TextStyle(color: Colors.black26,fontSize: 64),)),
         typedCharLength != null
             ? Text(
-                "$typedCharLength",
-                style: TextStyle(color: Colors.green, fontSize: 36),
-              )
+          "$typedCharLength",
+          style: TextStyle(color: Colors.black26, fontSize: 160),
+        )
             : Text(
-                "0",
-                style: TextStyle(color: Colors.green, fontSize: 36),
-              ),
-        SizedBox(
-          height: 20,
+          "0",
+          style: TextStyle(color: Colors.black26, fontSize: 160),
         ),
-        RaisedButton(
-          onPressed: () {
-            resetGame();
-          },
-          child: Text(
-            "Yeniden Dene !",
-            style: TextStyle(color: Colors.white),
+        GestureDetector(
+          onTap: () => resetGame(),
+          child: Container(
+            child: Image.asset("assets/tryAgain.png"),
+            width: MediaQuery.of(context).size.width / 2,
           ),
-          color: Colors.blueGrey,
         ),
       ];
     return Scaffold(
       appBar: step != 1
           ? AppBar(
-              title: Text("Akrep Hikayesi"),
-              backgroundColor: Colors.green,
-            )
+        title: Text("Akrep Hikayesi"),
+        backgroundColor: Color(0xFFA3DBEF),
+      )
           : AppBar(
-              automaticallyImplyLeading: false,
-              title: Text("Kral'ın Hikayesi"),
-              backgroundColor: Colors.green,
-            ),
-      backgroundColor: Colors.grey.shade300,
+        automaticallyImplyLeading: false,
+        title: Text("Akrep Hikayesi"),
+        backgroundColor: Color(0xFFA3DBEF),
+      ),
+      backgroundColor: Color(0xFFA3DBEF),
+      resizeToAvoidBottomInset: false,
       body: Center(
-        child: Column(
-          mainAxisAlignment: MainAxisAlignment.center,
-          children: shownWidget,
+        child: Stack(
+          children: [
+            Image.asset("assets/background.jpg"),
+            Column(
+              mainAxisAlignment: MainAxisAlignment.start,
+              children: shownWidget,
+            )
+          ],
         ),
       ),
     );

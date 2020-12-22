@@ -21,7 +21,7 @@ class _HardLevelState extends State<HardLevel> {
     return Scaffold(
       appBar: AppBar(
         title: Text("Zor Hikayeler"),
-        backgroundColor: Colors.red,
+        backgroundColor: Colors.teal,
       ),
       backgroundColor: Colors.grey.shade300,
       body: SingleChildScrollView(
