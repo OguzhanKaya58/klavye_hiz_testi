@@ -189,7 +189,13 @@ class _TekGozluGeyikState extends State<TekGozluGeyik> {
       body: Center(
         child: Stack(
           children: [
-            Image.asset("assets/background.jpg"),
+            Container(
+              child: Center(
+                child: Image.asset("assets/background.jpg"),
+              ),
+              width: MediaQuery.of(context).size.width,
+              height: MediaQuery.of(context).size.height,
+            ),
             Column(
               mainAxisAlignment: MainAxisAlignment.start,
               children: shownWidget,
