@@ -105,7 +105,7 @@ class _SadakaHikayesiState extends State<SadakaHikayesi> {
             scrollAxis: Axis.horizontal,
             crossAxisAlignment: CrossAxisAlignment.start,
             blankSpace: 20.0,
-            velocity: 75.0,
+            velocity: 100.0,
             pauseAfterRound: Duration(seconds: 1),
             showFadingOnlyWhenScrolling: true,
             fadingEdgeStartFraction: 0.1,
