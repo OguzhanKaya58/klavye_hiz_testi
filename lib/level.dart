@@ -1,5 +1,6 @@
 import 'package:flutter/cupertino.dart';
 import 'package:flutter/material.dart';
+import 'package:flutter/rendering.dart';
 import 'package:flutter_app_keyboard_speed/part/easy_level.dart';
 import 'package:flutter_app_keyboard_speed/part/hard_level.dart';
 import 'package:flutter_app_keyboard_speed/part/middle_level.dart';
@@ -13,17 +14,18 @@ class Level extends StatelessWidget {
         title: Center(
           child: Text("Yazarken Öğren"),
         ),
-        backgroundColor: Colors.teal,
+        backgroundColor: Color(0xFFA3DBEF),
       ),
       backgroundColor: Colors.grey.shade300,
       body: SingleChildScrollView(
+        scrollDirection: Axis.horizontal,
         child: Center(
-          child: Column(
+          child: Row(
             children: [
-              SizedBox(height: MediaQuery.of(context).size.height/24,),
+              SizedBox(width: MediaQuery.of(context).size.width/10,),
               Container(
                 width: MediaQuery.of(context).size.width - 80,
-                height: 300,
+                height: MediaQuery.of(context).size.height -250,
                 child: HoverCard(
                   builder: (context, hovering) {
                     return Container(
@@ -34,8 +36,8 @@ class Level extends StatelessWidget {
                         children: [
                           Container(
                             child: Image.asset("assets/easy.png"),
-                            width: 150,
-                            height: 150,
+                            width: MediaQuery.of(context).size.width / 2,
+                            height: MediaQuery.of(context).size.height / 3,
                           ),
                           Center(
                             child: Text(
@@ -64,10 +66,10 @@ class Level extends StatelessWidget {
                       offset: Offset(0, 40)),
                 ),
               ),
-              SizedBox(height: MediaQuery.of(context).size.height/16,),
+              SizedBox(width: MediaQuery.of(context).size.width/10,),
               Container(
                 width: MediaQuery.of(context).size.width - 80,
-                height: 300,
+                height: MediaQuery.of(context).size.height -250,
                 child: HoverCard(
                   builder: (context, hovering) {
                     return Container(
@@ -78,8 +80,8 @@ class Level extends StatelessWidget {
                         children: [
                           Container(
                             child: Image.asset("assets/middle.png"),
-                            width: 150,
-                            height: 150,
+                            width: MediaQuery.of(context).size.width / 2,
+                            height: MediaQuery.of(context).size.height / 3,
                           ),
                           Center(
                             child: Text(
@@ -108,10 +110,10 @@ class Level extends StatelessWidget {
                       offset: Offset(0, 40)),
                 ),
               ),
-              SizedBox(height: MediaQuery.of(context).size.height/16,),
+              SizedBox(width: MediaQuery.of(context).size.width/10,),
               Container(
                 width: MediaQuery.of(context).size.width - 80,
-                height: 300,
+                height: MediaQuery.of(context).size.height -250,
                 child: HoverCard(
                   builder: (context, hovering) {
                     return Container(
@@ -122,8 +124,8 @@ class Level extends StatelessWidget {
                         children: [
                           Container(
                             child: Image.asset("assets/hard.png"),
-                            width: 150,
-                            height: 150,
+                            width: MediaQuery.of(context).size.width / 2,
+                            height: MediaQuery.of(context).size.height / 3,
                           ),
                           Center(
                             child: Text(
@@ -152,7 +154,7 @@ class Level extends StatelessWidget {
                       offset: Offset(0, 40)),
                 ),
               ),
-              SizedBox(height: MediaQuery.of(context).size.height/16,),
+              SizedBox(width: MediaQuery.of(context).size.width/10,),
             ],
           ),
         ),

@@ -21,7 +21,7 @@ class _MiddleLevelState extends State<MiddleLevel> {
     return Scaffold(
       appBar: AppBar(
         title: Text("Orta Hikayeler"),
-        backgroundColor: Colors.teal,
+        backgroundColor: Color(0xFFA3DBEF),
       ),
       backgroundColor: Colors.grey.shade300,
       body: SingleChildScrollView(
